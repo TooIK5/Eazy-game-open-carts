@@ -7,7 +7,7 @@ function GetElements() {
 
 function Expend() {
     for (let i = 0; i < 32; i++) {
-        arr1.push(arr1[i]);
+        arr1.push(arr1[i]);     // could have been used spread operator
     }
 }
 
@@ -35,8 +35,9 @@ function getRandomColor() {
 
 function setColor() {
     let color = getRandomColor();
-    targets[0].style.background = color;
-    targets[1].style.background = color;
+    for (let i = 0; i < targets.length; i++) {
+        targets[i].style.background = color;
+    }
 }
 
 function isShow(e) {
